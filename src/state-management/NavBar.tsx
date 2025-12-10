@@ -1,9 +1,11 @@
-import LoginStatus from './LoginStatus';
+import LoginStatus from "./auth/LoginStatus";
+import useCounterStore from "./store";
 
 const NavBar = () => {
+  const { counter } = useCounterStore();
   return (
     <nav className="navbar d-flex justify-content-between">
-      <span className="badge text-bg-secondary">4</span>
+      <span className="badge text-bg-secondary">{counter}</span>
       <LoginStatus />
     </nav>
   );
