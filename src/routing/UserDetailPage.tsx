@@ -1,5 +1,8 @@
+import { useLocation } from "react-router-dom";
+
 const UserDetailPage = () => {
-  return <p>User</p>;
+  const location = useLocation();
+  return <p>User: {location?.pathname}</p>;
 };
 
 export default UserDetailPage;
